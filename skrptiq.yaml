@@ -1,0 +1,39 @@
+# --- Identity ---
+id: "e3cbad80-bb64-4288-bbe3-d6e98b874d70"
+name: "blog-refinement-loop"
+display_name: "Blog Refinement Loop"
+description: "Write, review, and revise a blog post iteratively until it meets your quality criteria"
+version: "1.0.0"
+engine: ">=1.0.0"
+
+# --- Attribution ---
+author:
+  name: "skrptiq"
+  url: "https://hub.skrptiq.ai"
+
+licence: "MIT"
+repository: "https://github.com/skrpts/blog-refinement-loop"
+
+# --- Discovery (Hub) ---
+category: "content-creator"
+tags:
+  - "blogging"
+  - "writing"
+  - "review"
+  - "loops"
+
+# --- Security & Access ---
+requires:
+  services:
+    - "llm-service"
+  permissions: []
+  data_handling: []
+
+# --- Contents ---
+contents:
+  skills: 3
+  prompts: 3
+  workflows: 1
+  services: 1
+  assets: 1
+  total: 9
