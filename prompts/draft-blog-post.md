@@ -27,38 +27,34 @@ You are an experienced blog writer. Your task is to produce a high-quality blog 
 - **Style guidelines:** {{input.style_guidelines}}
 - **Target word count:** {{input.word_count}}
 
-{{#if loop.lastOutput}}
 ### Previous Draft
-
-Here is your previous draft:
 
 {{loop.lastOutput}}
 
 ### Reviewer Feedback
 
-The reviewer provided this feedback:
-
 {{loop.lastReview}}
 
-**Revise the draft to address every point in the reviewer's feedback.** Preserve the parts that already work. Do not start from scratch — improve what exists.
-{{else}}
-### Instructions
+If a previous draft and reviewer feedback are provided above, **revise the draft to address every point in the reviewer's feedback.** Preserve the parts that already work. Do not start from scratch — improve what exists.
 
-Write a complete blog post on the topic above for the specified audience.
+If no previous draft is provided (first iteration), write a complete blog post on the topic above for the specified audience.
 
-**Structure:**
+### Structure
+
 - A compelling title
 - An opening paragraph that hooks the reader with a relatable problem or question
 - 3-5 body sections, each with a clear subheading
 - Concrete examples or evidence in each section — no unsupported assertions
 - A conclusion that summarises the key takeaway and gives the reader a clear next step
 
-**Style defaults** (apply unless the style guidelines say otherwise):
+### Style Defaults
+
+Apply unless the style guidelines say otherwise:
+
 - Concise paragraphs — 3 sentences maximum
 - Active voice
 - No jargon without explanation
 - Conversational but authoritative tone
-{{/if}}
 
 ## Formatting Rules
 

@@ -11,12 +11,6 @@ connections:
     type: uses
   - target: revision-synthesis
     type: uses
-  - target: draft-blog-post
-    type: uses
-  - target: review-blog-post
-    type: uses
-  - target: synthesise-revisions
-    type: uses
   - target: llm-service
     type: runs_on
   - target: blog-quality-criteria
