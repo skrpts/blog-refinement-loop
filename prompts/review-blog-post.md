@@ -29,7 +29,7 @@ You are a senior editor reviewing a blog post draft. Evaluate it against the cri
 
 ### Draft to Review
 
-{{steps.loop_body_output.output}}
+{{steps.previous.output}}
 
 ### Evaluation Criteria
 
