@@ -4,6 +4,31 @@ id: review-blog-post
 title: Review Blog Post
 description: "Evaluates a blog post against six quality criteria and produces a structured pass/continue/fail verdict"
 tags: [Production, Quality, Review]
+inputs:
+  topic:
+    label: "Topic"
+    description: "The main subject or topic to address"
+    example: "The impact of remote work on team productivity"
+    required: true
+    type: text
+  target_audience:
+    label: "Target Audience"
+    description: "Who this content is for — their role, experience level, and what they care about"
+    example: "Engineering managers at mid-size startups (50-200 employees)"
+    required: true
+    type: text
+  style_guidelines:
+    label: "Style Guidelines"
+    description: "Tone, voice, and formatting preferences for the output"
+    example: "Conversational but authoritative. Short paragraphs. No corporate jargon."
+    required: true
+    type: text
+  word_count:
+    label: "Word Count"
+    description: "Target word count for the output"
+    example: "2000"
+    required: true
+    type: text
 connections:
   - target: editorial-review
     type: derived_from

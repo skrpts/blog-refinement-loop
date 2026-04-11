@@ -4,6 +4,31 @@ id: draft-blog-post
 title: Draft Blog Post
 description: "Writes or revises a blog post based on the topic brief and any previous review feedback"
 tags: [Production, Content, Writing]
+inputs:
+  topic:
+    label: "Topic"
+    description: "The main subject or topic to address"
+    example: "The impact of remote work on team productivity"
+    required: true
+    type: text
+  target_audience:
+    label: "Target Audience"
+    description: "Who this content is for — their role, experience level, and what they care about"
+    example: "Engineering managers at mid-size startups (50-200 employees)"
+    required: true
+    type: text
+  style_guidelines:
+    label: "Style Guidelines"
+    description: "Tone, voice, and formatting preferences for the output"
+    example: "Conversational but authoritative. Short paragraphs. No corporate jargon."
+    required: true
+    type: text
+  word_count:
+    label: "Word Count"
+    description: "Target word count for the output"
+    example: "2000"
+    required: true
+    type: text
 connections:
   - target: blog-drafting
     type: derived_from
