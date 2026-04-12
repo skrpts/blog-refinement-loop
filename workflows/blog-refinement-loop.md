@@ -19,6 +19,14 @@ metadata:
   estimated_duration: "5-15 minutes"
   trigger: manual
   loop_modes: ["until_pass"]
+execution:
+  - skill: "blog-drafting"
+    step_type: "generation"
+  - skill: "editorial-review"
+    step_type: "validation"
+    input_from: "blog-drafting"
+  - skill: "revision-synthesis"
+    step_type: "synthesis"
 ---
 
 ## Overview
