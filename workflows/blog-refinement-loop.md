@@ -24,7 +24,6 @@ execution:
     step_type: "generation"
   - skill: "editorial-review"
     step_type: "validation"
-    input_from: "blog-drafting"
   - skill: "revision-synthesis"
     step_type: "synthesis"
 ---
