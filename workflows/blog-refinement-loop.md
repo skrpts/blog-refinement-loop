@@ -19,6 +19,20 @@ metadata:
   estimated_duration: "5-15 minutes"
   trigger: manual
   loop_modes: ["until_pass"]
+loops:
+  - id: "draft-review"
+    mode: "until_pass"
+    steps:
+      - "blog-drafting"
+      - "editorial-review"
+    verifier: "editorial-review"
+    maxIterations: 5
+    freshContextPerIteration: true
+output_step: "revision-synthesis"
+composite_steps:
+  - "blog-drafting"
+  - "editorial-review"
+  - "revision-synthesis"
 execution:
   - skill: "blog-drafting"
     step_type: "generation"
