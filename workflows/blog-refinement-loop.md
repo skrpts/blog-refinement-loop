@@ -11,6 +11,8 @@ connections:
     type: uses
   - target: revision-synthesis
     type: uses
+  - target: language-polish
+    type: uses
   - target: llm-service
     type: runs_on
   - target: blog-quality-criteria
@@ -28,11 +30,12 @@ loops:
     verifier: "editorial-review"
     maxIterations: 5
     freshContextPerIteration: true
-output_step: "revision-synthesis"
+output_step: "language-polish"
 composite_steps:
   - "blog-drafting"
   - "editorial-review"
   - "revision-synthesis"
+  - "language-polish"
 execution:
   - skill: "blog-drafting"
     step_type: "generation"
@@ -40,6 +43,8 @@ execution:
     step_type: "validation"
   - skill: "revision-synthesis"
     step_type: "synthesis"
+  - skill: "language-polish"
+    step_type: "content"
 ---
 
 ## Overview
