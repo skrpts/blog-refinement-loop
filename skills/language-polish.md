@@ -7,6 +7,16 @@ tags: [Production, Quality]
 connections:
   - target: llm-service
     type: runs_on
+context_params:
+  voice_profile:
+    label: "Voice Profile"
+    description: "Creator's writing style, vocabulary, sentence patterns, and banned words"
+    required: false
+  grammar_strictness:
+    label: "Grammar Strictness"
+    description: "How strict to be with grammar rules — Casual, Conversational, Professional, or Academic"
+    default: "Professional"
+    required: false
 ---
 
 ## Capability
