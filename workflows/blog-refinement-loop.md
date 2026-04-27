@@ -38,12 +38,16 @@ composite_steps:
   - "language-polish"
 execution:
   - skill: "blog-drafting"
+    prompt: "draft-blog-post"
     step_type: "generation"
   - skill: "editorial-review"
+    prompt: "review-blog-post"
     step_type: "validation"
   - skill: "revision-synthesis"
+    prompt: "synthesise-revisions"
     step_type: "synthesis"
   - skill: "language-polish"
+    prompt: "polish-language"
     step_type: "content"
 ---
 
