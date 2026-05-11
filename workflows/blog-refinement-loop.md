@@ -49,6 +49,9 @@ execution:
   - skill: "language-polish"
     prompt: "polish-language"
     step_type: "content"
+    context:
+      voice_profile: ""
+      grammar_strictness: ""
 ---
 
 ## Overview
