@@ -1,0 +1,15 @@
+- id: "blogging"
+  title: "Blogging"
+  description: "Blogging workflows and tools"
+
+- id: "writing"
+  title: "Writing"
+  description: "Writing workflows and tools"
+
+- id: "review"
+  title: "Review"
+  description: "Review workflows and tools"
+
+- id: "loops"
+  title: "Loops"
+  description: "Loops workflows and tools"
