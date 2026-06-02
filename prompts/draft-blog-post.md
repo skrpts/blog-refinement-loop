@@ -30,7 +30,7 @@ inputs:
     required: true
     type: text
 connections:
-  - target: blog-drafting
+  - target: draft-blog-revision
     type: derived_from
 metadata:
   output_format: markdown

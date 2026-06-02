@@ -5,7 +5,7 @@ title: Blog Refinement Loop
 description: "Write, review, and revise a blog post iteratively until it meets your quality criteria"
 tags: [Production, Customer-Facing, Content, Review, Loop]
 connections:
-  - target: blog-drafting
+  - target: draft-blog-revision
     type: uses
   - target: editorial-review
     type: uses
@@ -25,19 +25,19 @@ loops:
   - id: "draft-review"
     mode: "until_pass"
     steps:
-      - "blog-drafting"
+      - "draft-blog-revision"
       - "editorial-review"
     verifier: "editorial-review"
     maxIterations: 5
     freshContextPerIteration: true
 output_step: "language-polish"
 composite_steps:
-  - "blog-drafting"
+  - "draft-blog-revision"
   - "editorial-review"
   - "revision-synthesis"
   - "language-polish"
 execution:
-  - skill: "blog-drafting"
+  - skill: "draft-blog-revision"
     prompt: "draft-blog-post"
     step_type: "generation"
   - skill: "editorial-review"

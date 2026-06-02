@@ -3,7 +3,7 @@ id: "e3cbad80-bb64-4288-bbe3-d6e98b874d70"
 name: "blog-refinement-loop"
 display_name: "Blog Refinement Loop"
 description: "Write, review, and revise a blog post iteratively until it meets your quality criteria"
-version: "1.1.21"
+version: "1.1.22"
 engine: ">=0.1.0"
 
 # --- Attribution ---
@@ -23,6 +23,23 @@ tags:
   - "writing"
 
 # --- Security & Access ---
+dependencies:
+  - id: hub-shared/draft-blog-revision
+    version: 1.0.0
+    checksum: "sha256:f8f0616ba7864c1ea9a4dd834dbe88365093572c813be5896ea4a3871905d923"
+  - id: hub-shared/editorial-review
+    version: 1.0.0
+    checksum: "sha256:b647c48af3cd7d56378b4a651a81166b6ab1e7fc7db031721efc388c34c5f1bf"
+  - id: hub-shared/language-polish
+    version: 1.0.0
+    checksum: "sha256:9c48a06a9cd0da87d3569ba1fd1ef3106234b5dbc560d4d03be99021271a4fc2"
+  - id: hub-shared/llm-service
+    version: 1.0.0
+    checksum: "sha256:9940a8d84c3240b3dcea7fe8b88939ac43898ea4138c706ca17d783e7894bb23"
+  - id: hub-shared/polish-language
+    version: 1.0.0
+    checksum: "sha256:ef68da0b1d7b2b41e6ba5a8a2d4156e9180a261a0fcbf580c97ab2e87ec138ef"
+
 requires:
   services:
     - "llm-service"
@@ -31,11 +48,11 @@ requires:
 
 # --- Contents ---
 contents:
-  skills: 4
-  prompts: 4
+  skills: 1
+  prompts: 3
   workflows: 1
-  services: 1
+  services: 0
   sources: 0
   documents: 0
   assets: 1
-  total: 11
+  total: 6
