@@ -1,5 +1,8 @@
 # Release Notes
 
+## v1.1.25
+GH#638 Row 11 cascade — repin dep block to v1.0.1 of all 5 shared deps. Row 11 republished `hub-shared-draft-blog-revision`, `hub-shared-editorial-review`, `hub-shared-language-polish`, `hub-shared-llm-service`, and `hub-shared-polish-language` at v1.0.1 with each dep bundle's `manifest.id` aligned to the Hub catalogue UUID. v1.1.24 was pinned at v1.0.0 of each (pre-K-037 manifest.id, which engine STEP 4d correctly rejected). v1.1.25 pins v1.0.1 with the new checksums from the catalogue. No consumer-side content changes; UUID-version-checksum repin only.
+
 ## v1.1.24
 GH#638 Row 9 — fix-forward republish after v1.1.23 CI race. v1.1.23 pushed + tagged in the consumer repo, but the per-skrpt CI's `caller-release.yml` `Download CLI` step fetched `/releases/latest` while CLI was still at v0.0.17 (pre-K-037); structural validation rejected the UUID `dependencies[].id` with `dependency.unsupported_id_prefix`. CLI v0.0.18 (K-037-aware) is now live on `releases/latest` as of 2026-06-04 05:02 UTC. No content changes from v1.1.23; identical UUID-pinned dep block; this republish lets CI fetch v0.0.18 and complete the sign+release chain.
 
