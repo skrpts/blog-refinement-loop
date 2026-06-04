@@ -3,7 +3,7 @@ id: "e3cbad80-bb64-4288-bbe3-d6e98b874d70"
 name: "blog-refinement-loop"
 display_name: "Blog Refinement Loop"
 description: "Write, review, and revise a blog post iteratively until it meets your quality criteria"
-version: "1.1.22"
+version: "1.1.23"
 engine: ">=0.1.0"
 
 # --- Attribution ---
@@ -24,19 +24,24 @@ tags:
 
 # --- Security & Access ---
 dependencies:
-  - id: hub-shared/draft-blog-revision
+  - id: "65294086-c66d-4949-86b4-ed1c4ec5e219"
+    name: "draft-blog-revision"
     version: 1.0.0
     checksum: "sha256:f8f0616ba7864c1ea9a4dd834dbe88365093572c813be5896ea4a3871905d923"
-  - id: hub-shared/editorial-review
+  - id: "5b090c06-844a-469a-84a4-e7ec83d05394"
+    name: "editorial-review"
     version: 1.0.0
     checksum: "sha256:b647c48af3cd7d56378b4a651a81166b6ab1e7fc7db031721efc388c34c5f1bf"
-  - id: hub-shared/language-polish
+  - id: "3db66b8b-8758-4503-a555-5330f3f9b3d9"
+    name: "language-polish"
     version: 1.0.0
     checksum: "sha256:9c48a06a9cd0da87d3569ba1fd1ef3106234b5dbc560d4d03be99021271a4fc2"
-  - id: hub-shared/llm-service
+  - id: "fcab9536-a13e-49c9-b0c3-bb3097682e69"
+    name: "llm-service"
     version: 1.0.0
     checksum: "sha256:9940a8d84c3240b3dcea7fe8b88939ac43898ea4138c706ca17d783e7894bb23"
-  - id: hub-shared/polish-language
+  - id: "9b1771e0-39b0-4fbc-8d45-738f51b6083a"
+    name: "polish-language"
     version: 1.0.0
     checksum: "sha256:ef68da0b1d7b2b41e6ba5a8a2d4156e9180a261a0fcbf580c97ab2e87ec138ef"
 
