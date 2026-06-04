@@ -1,5 +1,8 @@
 # Release Notes
 
+## v1.1.24
+GH#638 Row 9 — fix-forward republish after v1.1.23 CI race. v1.1.23 pushed + tagged in the consumer repo, but the per-skrpt CI's `caller-release.yml` `Download CLI` step fetched `/releases/latest` while CLI was still at v0.0.17 (pre-K-037); structural validation rejected the UUID `dependencies[].id` with `dependency.unsupported_id_prefix`. CLI v0.0.18 (K-037-aware) is now live on `releases/latest` as of 2026-06-04 05:02 UTC. No content changes from v1.1.23; identical UUID-pinned dep block; this republish lets CI fetch v0.0.18 and complete the sign+release chain.
+
 ## v1.1.23
 GH#638 / K-037: dependencies block migrated to UUID-pinned identity. Each `dependencies[].id` is now the dep's canonical `manifest.id` UUID (looked up via the Hub catalogue), with the logical slug preserved in a new `name:` field for scanner resolution and human readability. Closes the App↔Hub dep-resolution failure surface where the App's engine STEP 4d strict UUID match could not reconcile `id: "hub-shared/<slug>"` against any catalogue row. No content changes from v1.1.22; identity-format-only.
 
