@@ -1,5 +1,11 @@
 # Release Notes
 
+## v1.1.27
+Fix-forward after Row 3b v1.1.26 publish failure. The v1.1.26 per-skrpt CI's "Register version with Hub API" step failed because the consumer's source `manifest.id` (e3cbad80…) did not match the D1 catalogue row's id (bfb6caea…) — a legacy drift from before Action 6 (`0bcc5ae0`) made publish-skrpt.mjs Step 2 INSERT use `manifest.id` for the D1 id column. v1.1.27 reconciles the source `manifest.id` to the catalogue authoritative value (Row-5-equivalent for consumers) and republishes. Per Adj-1: no re-tag of v1.1.26; the orphaned GitHub release artefact stays inert (no D1 versions row, no consumer pinned it).
+
+## v1.1.26
+GH#745 — declare per-step `output: {name, type}` on every execution step (draft/text, review_feedback/text, revised_draft/text, polished_post/text). Lights up the #744 rich flow-map with named, typed outputs. Content-only; no bindings or logic changes.
+
 ## v1.1.25
 GH#638 Row 11 cascade — repin dep block to v1.0.1 of all 5 shared deps. Row 11 republished `hub-shared-draft-blog-revision`, `hub-shared-editorial-review`, `hub-shared-language-polish`, `hub-shared-llm-service`, and `hub-shared-polish-language` at v1.0.1 with each dep bundle's `manifest.id` aligned to the Hub catalogue UUID. v1.1.24 was pinned at v1.0.0 of each (pre-K-037 manifest.id, which engine STEP 4d correctly rejected). v1.1.25 pins v1.0.1 with the new checksums from the catalogue. No consumer-side content changes; UUID-version-checksum repin only.
 

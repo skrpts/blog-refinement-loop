@@ -40,12 +40,15 @@ execution:
   - skill: "draft-blog-revision"
     prompt: "draft-blog-post"
     step_type: "generation"
+    output: { name: "draft", type: "text" }
   - skill: "editorial-review"
     prompt: "review-blog-post"
     step_type: "validation"
+    output: { name: "review_feedback", type: "text" }
   - skill: "revision-synthesis"
     prompt: "synthesise-revisions"
     step_type: "synthesis"
+    output: { name: "revised_draft", type: "text" }
   - skill: "language-polish"
     prompt: "polish-language"
     step_type: "content"

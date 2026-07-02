@@ -1,9 +1,9 @@
 # --- Identity ---
-id: "e3cbad80-bb64-4288-bbe3-d6e98b874d70"
+id: "bfb6caea-1dc1-4583-9842-595033219341"
 name: "blog-refinement-loop"
 display_name: "Blog Refinement Loop"
 description: "Write, review, and revise a blog post iteratively until it meets your quality criteria"
-version: "1.1.25"
+version: "1.1.27"
 engine: ">=0.1.0"
 
 # --- Attribution ---
@@ -61,3 +61,17 @@ contents:
   documents: 0
   assets: 1
   total: 6
+
+security:
+  status: "pass"
+  scanned_at: "2026-07-02T19:37:43.426Z"
+  scanner_version: "3.3.0"
+  syntactic: "pass"
+  structural: "pass"
+  detected:
+    services: ["llm-service"]
+    permissions: []
+    data_handling: []
+  undeclared: []
+  warnings: []
+  report_url: "https://hub.skrptiq.ai/skrpts/blog-refinement-loop/security"
