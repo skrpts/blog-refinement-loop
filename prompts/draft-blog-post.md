@@ -70,7 +70,7 @@ If no previous draft is provided (first iteration), write a complete blog post o
 - An opening paragraph that hooks the reader with a relatable problem or question
 - 3-5 body sections, each with a clear subheading
 - Concrete examples or evidence in each section — no unsupported assertions
-- A conclusion that summarises the key takeaway and gives the reader a clear next step
+- A conclusion that summarizes the key takeaway and gives the reader a clear next step
 
 ### Style Defaults
 

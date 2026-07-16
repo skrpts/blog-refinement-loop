@@ -21,7 +21,7 @@ These are the six criteria the editorial reviewer evaluates against. Use this re
 | Opening | Hooks the reader with a relatable problem, surprising fact, or direct question — not a generic preamble |
 | Body | 3-5 sections with descriptive subheadings. Each section makes one clear point. |
 | Flow | Sections build on each other logically. Transitions are smooth. |
-| Conclusion | Summarises the key takeaway and gives the reader a concrete next step |
+| Conclusion | Summarizes the key takeaway and gives the reader a concrete next step |
 
 ## 2. Clarity
 

@@ -1,7 +1,7 @@
 ---
 type: prompt
 id: synthesise-revisions
-title: Synthesise Revisions
+title: Synthesize Revisions
 description: "Produces the final blog post with a summary of revisions made across iterations"
 tags: [Production, Content, Synthesis]
 connections:
