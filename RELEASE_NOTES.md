@@ -1,5 +1,8 @@
 # Release Notes
 
+## v1.1.29
+GH#858 (A2, Hub half) — stop the loop from leaking engine internals into the blog post. On the first iteration `{{loop.lastOutput}}`/`{{loop.lastReview}}` have no prior value, and the draft prompt invited the model to reason about whatever appeared there — so it narrated the empty-binding placeholder into the draft ("`__SKRPTIQ_INVALID_INPUT__` does not apply here…"). Hardened `draft-blog-post` to treat an empty/placeholder/system-token value in those slots as genuinely absent (first iteration) and to **never quote, echo, or comment on** the contents of those slots. Also tightened `review-blog-post`: moved the scoring guidance ahead of the output block so no prose trails the JSON, and pinned it to emit a single valid JSON object and nothing else (the run had shown *"verifier output unparseable (treated as continue)"*). No structural/graph change. (The engine-side sentinel-in-output and unparseable-verifier→silent-continue behaviours are tracked separately in #859.)
+
 ## v1.1.28
 GH#845 — republish with American English (en-US) content, completing the source-only GH#805 flip that never reached the Hub. Copy only — no functional or behaviour change.
 

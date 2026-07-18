@@ -3,7 +3,7 @@ id: "bfb6caea-1dc1-4583-9842-595033219341"
 name: "blog-refinement-loop"
 display_name: "Blog Refinement Loop"
 description: "Write, review, and revise a blog post iteratively until it meets your quality criteria"
-version: "1.1.28"
+version: "1.1.29"
 engine: ">=0.1.0"
 
 # --- Attribution ---
@@ -64,7 +64,7 @@ contents:
 
 security:
   status: "pass"
-  scanned_at: "2026-07-16T20:22:29.123Z"
+  scanned_at: "2026-07-18T13:49:19.134Z"
   scanner_version: "3.3.0"
   syntactic: "pass"
   structural: "pass"

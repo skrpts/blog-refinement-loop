@@ -60,9 +60,12 @@ You are an experienced blog writer. Your task is to produce a high-quality blog 
 
 {{loop.lastReview}}
 
-If a previous draft and reviewer feedback are provided above, **revise the draft to address every point in the reviewer's feedback.** Preserve the parts that already work. Do not start from scratch — improve what exists.
+**How to read the two sections above:**
 
-If no previous draft is provided (first iteration), write a complete blog post on the topic above for the specified audience.
+- If they contain a **real draft and real feedback**, this is a revision pass: **revise the draft to address every point in the reviewer's feedback.** Preserve the parts that already work — do not start from scratch, improve what exists.
+- If either section is **empty, or contains only a placeholder or system token** (for example an `__…__` marker) rather than genuine prose, treat it as **absent**: this is the **first iteration**, so ignore both sections and write a complete blog post on the topic above for the specified audience.
+
+**Never quote, echo, describe, or comment on the contents of those two sections in your output.** They are internal working context, not part of the blog post. If a section is empty or a placeholder, say nothing about it — just proceed. Your output must be the blog post itself and nothing else.
 
 ### Structure
 

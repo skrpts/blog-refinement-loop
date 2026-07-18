@@ -73,16 +73,20 @@ Score each criterion as **met** or **not met**. Be specific about what works and
 - **One or more criteria not met, but fixable** → status: `continue` with specific instructions
 - **Fundamentally off-topic or unsalvageable** → status: `fail` with explanation
 
+### Scoring Guidance
+
+Be demanding but fair. A post that is good enough to publish should `pass`. A post that needs polish but has the right structure and content should `continue`. Only `fail` if the post is fundamentally wrong for the brief.
+
+If the draft to review is empty or contains only a placeholder or system token rather than a real post, return `continue` with instructions to produce a complete first draft — do not comment on the placeholder.
+
 ### Required Output Format
 
-Respond with ONLY a JSON object. No markdown, no code fences, no additional text.
+Your entire response must be a **single valid JSON object and nothing else** — it is read by a machine, not a person. Do not include any reasoning, preamble, explanation, markdown, code fences, or any text before or after the object. Begin your response with `{` and end it with `}`.
 
-```
+The object has exactly these fields:
+
 {
   "status": "pass" or "continue" or "fail",
   "reason": "2-3 sentences explaining your verdict, listing which criteria passed and which did not",
   "instructions": "If continuing: specific, actionable instructions for the next revision. If passing or failing: omit this field."
 }
-```
-
-Be demanding but fair. A post that is good enough to publish should pass. A post that needs polish but has the right structure and content should continue. Only fail if the post is fundamentally wrong for the brief.
