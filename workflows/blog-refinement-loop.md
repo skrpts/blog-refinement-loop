@@ -55,6 +55,10 @@ execution:
     context:
       voice_profile: "Neutral professional tone"
       grammar_strictness: "Professional"
+    bindings:
+      source:
+        from_step: "Revision Synthesis"
+        field: output
 ---
 
 ## Overview

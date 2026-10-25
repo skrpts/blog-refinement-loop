@@ -1,5 +1,16 @@
 # Release Notes
 
+## v1.1.30
+GH#1100 consumer wave (batch 1) — declare the data flow this workflow was resolving positionally.
+
+Each stage below now receives its input through a declared `bindings:` entry instead of `default_from_previous`, which K-073 revoked. **The value is unchanged**: every binding names the step that immediately precedes it, which is exactly what the positional default resolved to. What changes is that the dependency is stated rather than inferred from position, so a reorder can no longer silently feed a stage the wrong artefact.
+
+Bindings added:
+  `polish-language` ← `from_step: "Revision Synthesis"` (step 4)
+
+Dependency pins moved to the published versions that declare these slots:
+  `polish-language` 1.0.1 → 1.0.7
+
 ## v1.1.29
 GH#858 (A2, Hub half) — stop the loop from leaking engine internals into the blog post. On the first iteration `{{loop.lastOutput}}`/`{{loop.lastReview}}` have no prior value, and the draft prompt invited the model to reason about whatever appeared there — so it narrated the empty-binding placeholder into the draft ("`__SKRPTIQ_INVALID_INPUT__` does not apply here…"). Hardened `draft-blog-post` to treat an empty/placeholder/system-token value in those slots as genuinely absent (first iteration) and to **never quote, echo, or comment on** the contents of those slots. Also tightened `review-blog-post`: moved the scoring guidance ahead of the output block so no prose trails the JSON, and pinned it to emit a single valid JSON object and nothing else (the run had shown *"verifier output unparseable (treated as continue)"*). No structural/graph change. (The engine-side sentinel-in-output and unparseable-verifier→silent-continue behaviours are tracked separately in #859.)
 
